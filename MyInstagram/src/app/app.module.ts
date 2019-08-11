@@ -9,10 +9,11 @@ import { FollowingComponent } from './following/following.component';
 import { FevComponent } from './fev/fev.component';
 import { MyPostComponent } from './my-post/my-post.component';
 import { SignInComponent } from './auth/sign-in/sign-in.component';
-
+import {FormsModule} from '@angular/forms';
 import { SignUpComponent } from './auth/sign-up/sign-up.component';
 import { HomeComponent } from './home/home.component';
 import { ROUTES } from '@angular/router';
+import { Routeguard } from './auth/routeGaurd';
 
 @NgModule({
   declarations: [
@@ -30,9 +31,10 @@ import { ROUTES } from '@angular/router';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [Routeguard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
