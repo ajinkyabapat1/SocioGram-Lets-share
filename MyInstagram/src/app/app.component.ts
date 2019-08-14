@@ -1,14 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import * as firebase from 'Firebase';
+import {Component, OnInit} from '@angular/core';
+import * as firebase from 'firebase';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'MyInstagram';
-  s
-  ngOnInit(){
+  title = 'app';
+
+  ngOnInit() {
     const firebaseConfig = {
       apiKey: "AIzaSyCmzFsM_-jY-mf-gp26AluFVUl8uBqE3to",
       authDomain: "sociogram-f7a57.firebaseapp.com",
@@ -21,5 +22,5 @@ export class AppComponent implements OnInit {
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
   }
- 
+
 }
